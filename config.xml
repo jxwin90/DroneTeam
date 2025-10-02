@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <_BAUD>115200</_BAUD>
+  <AA_CheckEnableAltitudeAngel>True</AA_CheckEnableAltitudeAngel>
+  <APMFirmware>ArduPlane</APMFirmware>
+  <AUTO_BAUD>9600</AUTO_BAUD>
+  <AutoConnect>[
+  {
+    "Label": "Mavlink default port",
+    "Enabled": true,
+    "Port": 14550,
+    "Protocol": "Udp",
+    "Format": "MAVLink",
+    "Direction": "Inbound",
+    "ConfigString": ""
+  },
+  {
+    "Label": "Mavlink alt port",
+    "Enabled": true,
+    "Port": 14551,
+    "Protocol": "Udp",
+    "Format": "MAVLink",
+    "Direction": "Inbound",
+    "ConfigString": ""
+  },
+  {
+    "Label": "Mavlink sitl port",
+    "Enabled": false,
+    "Port": 5760,
+    "Protocol": "Tcp",
+    "Format": "MAVLink",
+    "Direction": "Outbound",
+    "ConfigString": "127.0.0.1"
+  },
+  {
+    "Label": "Video udp 5000 h264",
+    "Enabled": true,
+    "Port": 5000,
+    "Protocol": "Udp",
+    "Format": "Video",
+    "Direction": "Inbound",
+    "ConfigString": "udpsrc port=5000 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "Video udp 5100 h264",
+    "Enabled": true,
+    "Port": 5100,
+    "Protocol": "Udp",
+    "Format": "Video",
+    "Direction": "Inbound",
+    "ConfigString": "udpsrc port=5100 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "Video udp 5600 h264",
+    "Enabled": true,
+    "Port": 5600,
+    "Protocol": "Udp",
+    "Format": "Video",
+    "Direction": "Inbound",
+    "ConfigString": "udpsrc port=5600 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H264 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "Video udp 5601 h265",
+    "Enabled": true,
+    "Port": 5601,
+    "Protocol": "Udp",
+    "Format": "Video",
+    "Direction": "Inbound",
+    "ConfigString": "udpsrc port=5601 buffer-size=90000 ! application/x-rtp,media=(string)video,clock-rate=(int)90000,encoding-name=(string)H265 ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "SkyViper",
+    "Enabled": false,
+    "Port": 554,
+    "Protocol": "Tcp",
+    "Format": "Video",
+    "Direction": "Outbound",
+    "ConfigString": "rtspsrc location=rtsp://192.168.99.1/media/stream2 debug=false buffer-mode=1 latency=100 ntp-time-source=3 ! application/x-rtp ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "HereLink Wifi",
+    "Enabled": false,
+    "Port": 8554,
+    "Protocol": "Tcp",
+    "Format": "Video",
+    "Direction": "Outbound",
+    "ConfigString": "rtspsrc location=rtsp://192.168.43.1:8554/fpv_stream latency=41 udp-reconnect=1 timeout=0 do-retransmission=false ! application/x-rtp ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "HereLink GCS",
+    "Enabled": false,
+    "Port": 8554,
+    "Protocol": "Tcp",
+    "Format": "Video",
+    "Direction": "Outbound",
+    "ConfigString": "rtspsrc location=rtsp://192.168.0.10:8554/H264Video latency=41 udp-reconnect=1 timeout=0 do-retransmission=false ! application/x-rtp ! decodebin3 ! queue max-size-buffers=1 leaky=2 ! videoconvert ! video/x-raw,format=BGRA ! appsink name=outsink sync=false"
+  },
+  {
+    "Label": "Serial",
+    "Enabled": false,
+    "Port": 57600,
+    "Protocol": "Serial",
+    "Format": "MAVLink",
+    "Direction": "Outbound",
+    "ConfigString": ""
+  }
+]</AutoConnect>
+  <CMB_altmode>Relative</CMB_altmode>
+  <COM3_BAUD>9600</COM3_BAUD>
+  <COM4_BAUD>9600</COM4_BAUD>
+  <comport>TCP</comport>
+  <displayview>{
+  "displayRTKInject": true,
+  "displayGPSOrder": true,
+  "displayHWIDs": true,
+  "displayADSB": true,
+  "displayName": 1,
+  "displaySimulation": true,
+  "displayTerminal": true,
+  "displayDonate": true,
+  "displayHelp": true,
+  "displayAnenometer": true,
+  "displayQuickTab": true,
+  "displayPreFlightTab": true,
+  "displayAdvActionsTab": true,
+  "displaySimpleActionsTab": false,
+  "displayGaugesTab": true,
+  "displayStatusTab": true,
+  "displayServoTab": true,
+  "displayScriptsTab": true,
+  "displayTelemetryTab": true,
+  "displayDataflashTab": true,
+  "displayMessagesTab": true,
+  "displayTransponderTab": true,
+  "displayAuxFunctionTab": true,
+  "displayPayloadTab": true,
+  "displayRallyPointsMenu": true,
+  "displayGeoFenceMenu": true,
+  "displaySplineCircleAutoWp": true,
+  "displayTextAutoWp": true,
+  "displayCircleSurveyAutoWp": true,
+  "displayPoiMenu": true,
+  "displayTrackerHomeMenu": true,
+  "displayCheckHeightBox": true,
+  "displayPluginAutoWp": true,
+  "displayInstallFirmware": true,
+  "displayWizard": true,
+  "displayFrameType": true,
+  "displayAccelCalibration": true,
+  "displayCompassConfiguration": true,
+  "displayRadioCalibration": true,
+  "displayEscCalibration": true,
+  "displayFlightModes": true,
+  "displayFailSafe": true,
+  "displaySikRadio": true,
+  "displayBattMonitor": true,
+  "displayCAN": true,
+  "displayCompassMotorCalib": true,
+  "displayRangeFinder": true,
+  "displayAirSpeed": true,
+  "displayPx4Flow": true,
+  "displayOpticalFlow": true,
+  "displayOsd": true,
+  "displayCameraGimbal": true,
+  "displayMotorTest": true,
+  "displayBluetooth": true,
+  "displayParachute": true,
+  "displayEsp": true,
+  "displayAntennaTracker": true,
+  "displaySerialPorts": true,
+  "displayGeoFence": true,
+  "displayBasicTuning": true,
+  "displayExtendedTuning": true,
+  "displayStandardParams": false,
+  "displayAdvancedParams": false,
+  "displayMavFTP": true,
+  "displayFullParamList": true,
+  "displayFullParamTree": true,
+  "displayParamCommitButton": false,
+  "displayBaudCMB": true,
+  "displaySerialPortCMB": true,
+  "standardFlightModesOnly": false,
+  "autoHideMenuForce": false,
+  "displayInitialParams": true,
+  "isAdvancedMode": true,
+  "displayREPL": true,
+  "displayServoOutput": true,
+  "displayJoystick": true,
+  "displayOSD": true,
+  "displayUserParam": true,
+  "displayPlannerSettings": true,
+  "displayFFTSetup": true,
+  "displayPreFlightTabEdit": true,
+  "displayPlannerLayout": true,
+  "lockQuickView": false
+}</displayview>
+  <eunfzforceshow>True</eunfzforceshow>
+  <eunfzshow>True</eunfzshow>
+  <eunfzshowask>True</eunfzshowask>
+  <FlightSplitter>594</FlightSplitter>
+  <FPaltmode>3</FPaltmode>
+  <fpcoordmouse>GEO</fpcoordmouse>
+  <fpminaltwarning>0</fpminaltwarning>
+  <fw_check>9/30/2025</fw_check>
+  <GMapMarkerBase_DisplayCOG>True</GMapMarkerBase_DisplayCOG>
+  <GMapMarkerBase_DisplayHeading>True</GMapMarkerBase_DisplayHeading>
+  <GMapMarkerBase_DisplayNavBearing>True</GMapMarkerBase_DisplayNavBearing>
+  <GMapMarkerBase_DisplayRadius>True</GMapMarkerBase_DisplayRadius>
+  <GMapMarkerBase_DisplayTarget>True</GMapMarkerBase_DisplayTarget>
+  <GMapMarkerBase_InactiveDisplayStyle>Normal</GMapMarkerBase_InactiveDisplayStyle>
+  <GMapMarkerBase_length>500</GMapMarkerBase_length>
+  <groundColorToolStripMenuItem>False</groundColorToolStripMenuItem>
+  <guid>17be681b-0c42-4f4d-a982-d6733a0c7fc9</guid>
+  <InputBoxAltitudePleaseenteryourtakeoffaltitudeinm>15</InputBoxAltitudePleaseenteryourtakeoffaltitudeinm>
+  <InputBoxDefaultAltDefaultAltitude>100</InputBoxDefaultAltDefaultAltitude>
+  <InputBoxHomeAltHomeAltitude>100</InputBoxHomeAltHomeAltitude>
+  <InputBoxInsertWPInsertWPafterwp>1</InputBoxInsertWPInsertWPafterwp>
+  <InputBoxListernPortEnterLocalportensureremoteendisalreadysending>14550</InputBoxListernPortEnterLocalportensureremoteendisalreadysending>
+  <InputBoxTakeoffPitchPleaseenteryourtakeoffpitch>15</InputBoxTakeoffPitchPleaseenteryourtakeoffpitch>
+  <kindex>7</kindex>
+  <kindexdate>9/30/2025</kindexdate>
+  <LB_Grid>False</LB_Grid>
+  <logdirectory>C:\Users\jxngu\Documents\Mission Planner\logs</logdirectory>
+  <MainHeight>56</MainHeight>
+  <MainLocX>-32000</MainLocX>
+  <MainLocY>-32000</MainLocY>
+  <MainMaximised>Minimized</MainMaximised>
+  <MainWidth>452</MainWidth>
+  <maplast_lat>-35.3649504</maplast_lat>
+  <maplast_lng>149.1635686</maplast_lng>
+  <maplast_zoom>18</maplast_zoom>
+  <MapType>GoogleSatelliteMap</MapType>
+  <menu_autohide>false</menu_autohide>
+  <Prearm_Checks_StartLocation>{
+  "Location": "0, 0",
+  "Size": "400, 300",
+  "State": 0
+}</Prearm_Checks_StartLocation>
+  <rawparam_Command_width>130</rawparam_Command_width>
+  <rawparam_Default_value_width>70</rawparam_Default_value_width>
+  <rawparam_Fav_width>30</rawparam_Fav_width>
+  <rawparam_Options_width>150</rawparam_Options_width>
+  <rawparam_panel1collapsed>False</rawparam_panel1collapsed>
+  <rawparam_splitterdistance>180</rawparam_splitterdistance>
+  <rawparam_Units_width>60</rawparam_Units_width>
+  <rawparam_Value_width>70</rawparam_Value_width>
+  <SerialInjectGPS_SeptentrioRTCMLevel>1</SerialInjectGPS_SeptentrioRTCMLevel>
+  <severity>4</severity>
+  <SHOWAGAIN_Raw_Param_Warning>False</SHOWAGAIN_Raw_Param_Warning>
+  <sitl_download_version>0</sitl_download_version>
+  <tabcontrolactions>tabQuick;tabActions;tabPagemessages;tabPagePreFlight;tabGauges;tabTransponder;tabStatus;tabServo;tabAuxFunction;tabScripts;tabPayload;tabTLogs;tablogbrowse;</tabcontrolactions>
+  <tabControlactions_Multiline>True</tabControlactions_Multiline>
+  <TCP_BAUD>9600</TCP_BAUD>
+  <terminaltheming>True</terminaltheming>
+  <theme>BurntKermit.mpsystheme</theme>
+  <Tuning_Graph_Selected>roll|pitch|nav_roll|nav_pitch|yaw|ay|az|ax|gx|gy|gy3|</Tuning_Graph_Selected>
+  <TXT_DefaultAlt>100</TXT_DefaultAlt>
+  <TXT_homealt>587.10</TXT_homealt>
+  <TXT_homelat>-35.3632623</TXT_homelat>
+  <TXT_homelng>149.1652375</TXT_homelng>
+  <TXT_loiterrad>80</TXT_loiterrad>
+  <TXT_WPRad>50.00</TXT_WPRad>
+  <UDP_BAUD>9600</UDP_BAUD>
+  <UDP_port>14550</UDP_port>
+  <update_check>9/30/2025</update_check>
+  <Vibration_StartLocation>{
+  "Location": "-1, -1",
+  "Size": "371, 313",
+  "State": 0
+}</Vibration_StartLocation>
+</Config>
