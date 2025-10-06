@@ -2,7 +2,7 @@
 <Config>
   <_BAUD>115200</_BAUD>
   <AA_CheckEnableAltitudeAngel>True</AA_CheckEnableAltitudeAngel>
-  <APMFirmware>ArduPlane</APMFirmware>
+  <APMFirmware>ArduCopter2</APMFirmware>
   <AUTO_BAUD>9600</AUTO_BAUD>
   <AutoConnect>[
   {
@@ -201,7 +201,7 @@
   <FPaltmode>3</FPaltmode>
   <fpcoordmouse>GEO</fpcoordmouse>
   <fpminaltwarning>0</fpminaltwarning>
-  <fw_check>9/30/2025</fw_check>
+  <fw_check>10/6/2025</fw_check>
   <GMapMarkerBase_DisplayCOG>True</GMapMarkerBase_DisplayCOG>
   <GMapMarkerBase_DisplayHeading>True</GMapMarkerBase_DisplayHeading>
   <GMapMarkerBase_DisplayNavBearing>True</GMapMarkerBase_DisplayNavBearing>
@@ -217,17 +217,17 @@
   <InputBoxInsertWPInsertWPafterwp>1</InputBoxInsertWPInsertWPafterwp>
   <InputBoxListernPortEnterLocalportensureremoteendisalreadysending>14550</InputBoxListernPortEnterLocalportensureremoteendisalreadysending>
   <InputBoxTakeoffPitchPleaseenteryourtakeoffpitch>15</InputBoxTakeoffPitchPleaseenteryourtakeoffpitch>
-  <kindex>7</kindex>
-  <kindexdate>9/30/2025</kindexdate>
+  <kindex>1</kindex>
+  <kindexdate>10/6/2025</kindexdate>
   <LB_Grid>False</LB_Grid>
   <logdirectory>C:\Users\jxngu\Documents\Mission Planner\logs</logdirectory>
-  <MainHeight>56</MainHeight>
-  <MainLocX>-32000</MainLocX>
-  <MainLocY>-32000</MainLocY>
-  <MainMaximised>Minimized</MainMaximised>
-  <MainWidth>452</MainWidth>
-  <maplast_lat>-35.3649504</maplast_lat>
-  <maplast_lng>149.1635686</maplast_lng>
+  <MainHeight>882</MainHeight>
+  <MainLocX>-8</MainLocX>
+  <MainLocY>-8</MainLocY>
+  <MainMaximised>Maximized</MainMaximised>
+  <MainWidth>1479</MainWidth>
+  <maplast_lat>-35.3632622</maplast_lat>
+  <maplast_lng>149.1652375</maplast_lng>
   <maplast_zoom>18</maplast_zoom>
   <MapType>GoogleSatelliteMap</MapType>
   <menu_autohide>false</menu_autohide>
@@ -241,7 +241,7 @@
   <rawparam_Fav_width>30</rawparam_Fav_width>
   <rawparam_Options_width>150</rawparam_Options_width>
   <rawparam_panel1collapsed>False</rawparam_panel1collapsed>
-  <rawparam_splitterdistance>180</rawparam_splitterdistance>
+  <rawparam_splitterdistance>276</rawparam_splitterdistance>
   <rawparam_Units_width>60</rawparam_Units_width>
   <rawparam_Value_width>70</rawparam_Value_width>
   <SerialInjectGPS_SeptentrioRTCMLevel>1</SerialInjectGPS_SeptentrioRTCMLevel>
@@ -262,7 +262,7 @@
   <TXT_WPRad>50.00</TXT_WPRad>
   <UDP_BAUD>9600</UDP_BAUD>
   <UDP_port>14550</UDP_port>
-  <update_check>9/30/2025</update_check>
+  <update_check>10/6/2025</update_check>
   <Vibration_StartLocation>{
   "Location": "-1, -1",
   "Size": "371, 313",
